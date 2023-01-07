@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/web-types",
+  "name": "web-components",
+  "version": "0.0.0",
+  "description-markup": "markdown",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "my-switch",
+          "description": "Switches allow the user to toggle an option on or off.",
+          "doc-url": "",
+          "attributes": [],
+          "js": { "properties": [], "events": [] }
+        }
+      ]
+    },
+    "css": {
+      "properties": [],
+      "pseudo-elements": []
+    }
+  }
+}

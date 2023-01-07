@@ -1,0 +1,10 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "my-switch",
+      "description": "Switches allow the user to toggle an option on or off.",
+      "attributes": []
+    }
+  ]
+}
