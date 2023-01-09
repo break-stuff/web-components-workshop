@@ -30,6 +30,7 @@
     "@babel/core": "^7.20.2",
     "@custom-elements-manifest/analyzer": "^0.6.6",
     "@open-wc/testing": "^3.0.0-next.5",
+    "@storybook/addon-a11y": "^6.5.15",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-controls": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
