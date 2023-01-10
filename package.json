@@ -15,9 +15,10 @@
   ],
   "scripts": {
     "analyze": "cem analyze",
+    "analyze:dev": "cem analyze --watch",
     "build": "tsc && vite build && cem analyze && tsc --emitDeclarationOnly",
     "build-storybook": "build-storybook",
-    "dev": "run-p build storybook",
+    "dev": "run-p analyze:dev storybook",
     "start": "vite --open",
     "storybook": "start-storybook -p 6006",
     "test": "web-test-runner",
