@@ -4,7 +4,12 @@ import "./index";
 export default {
   title: "Components/Switch",
   component: "my-switch",
-  args: {},
+  argTypes: {},
+  parameters: {
+    actions: {
+      handles: [],
+    },
+  },
 };
 
 const DefaultTemplate = () => {
