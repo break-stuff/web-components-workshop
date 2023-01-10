@@ -9,6 +9,11 @@ import { styles } from "./my-switch.styles";
  *
  * @cssprop [--size=1rem] - Controls the size of the switch
  * 
+ * @csspart control - controls styles for the switch button
+ * @csspart track - controls styles for the switch track
+ * @csspart checked - controls styles for the switch track when checked
+ * @csspart switch - controls styles for the switch
+ * 
  * @event switch-change - Emitted when switch is toggled
  * 
  * @slot checked - Displays when switch is on

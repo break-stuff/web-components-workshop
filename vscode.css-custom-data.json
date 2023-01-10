@@ -7,5 +7,22 @@
       "values": []
     }
   ],
-  "pseudoElements": []
+  "pseudoElements": [
+    {
+      "name": "::part(control)",
+      "description": "controls styles for the switch button"
+    },
+    {
+      "name": "::part(track)",
+      "description": "controls styles for the switch track"
+    },
+    {
+      "name": "::part(checked)",
+      "description": "controls styles for the switch track when checked"
+    },
+    {
+      "name": "::part(switch)",
+      "description": "controls styles for the switch"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "tags": [
     {
       "name": "my-switch",
-      "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displays when switch is on\n- **unchecked** - Displays when switch is off\n\n**Events:**\n - **switch-change** - Emitted when switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_",
+      "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displays when switch is on\n- **unchecked** - Displays when switch is off\n\n**Events:**\n - **switch-change** - Emitted when switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_\n\n**CSS Parts:**\n - **control** - controls styles for the switch button\n- **track** - controls styles for the switch track\n- **checked** - controls styles for the switch track when checked\n- **switch** - controls styles for the switch",
       "attributes": [
         {
           "name": "label",
