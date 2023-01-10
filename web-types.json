@@ -8,15 +8,71 @@
       "elements": [
         {
           "name": "my-switch",
-          "description": "Switches allow the user to toggle an option on or off.",
+          "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displays when switch is on\n- **unchecked** - Displays when switch is off\n\n**Events:**\n - **switch-change** - Emitted when switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_",
           "doc-url": "",
-          "attributes": [],
-          "js": { "properties": [], "events": [] }
+          "attributes": [
+            {
+              "name": "label",
+              "description": "Adds a description for the switch",
+              "value": { "type": "string | undefined" }
+            },
+            {
+              "name": "checked",
+              "description": "Used to determine if the switch is on or off",
+              "value": { "type": "boolean" }
+            },
+            {
+              "name": "disabled",
+              "description": "Prevents switch form changing value",
+              "value": { "type": "boolean" }
+            },
+            {
+              "name": "label-position",
+              "description": "Identifies where in relation to the switch the label should be placed",
+              "value": {
+                "type": "| \"top\"\n    | \"start\"\n    | \"end\"\n    | \"bottom\""
+              }
+            }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "label",
+                "description": "Adds a description for the switch",
+                "value": { "type": "string | undefined" }
+              },
+              {
+                "name": "checked",
+                "description": "Used to determine if the switch is on or off",
+                "value": { "type": "boolean" }
+              },
+              {
+                "name": "disabled",
+                "description": "Prevents switch form changing value",
+                "value": { "type": "boolean" }
+              },
+              {
+                "name": "label-position",
+                "description": "Identifies where in relation to the switch the label should be placed",
+                "value": {
+                  "type": "| \"top\"\n    | \"start\"\n    | \"end\"\n    | \"bottom\""
+                }
+              }
+            ],
+            "events": [
+              {
+                "name": "switch-change",
+                "description": "Emitted when switch is toggled"
+              }
+            ]
+          }
         }
       ]
     },
     "css": {
-      "properties": [],
+      "properties": [
+        { "name": "--size", "description": "Controls the size of the switch" }
+      ],
       "pseudo-elements": []
     }
   }

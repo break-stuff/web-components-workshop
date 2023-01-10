@@ -19,5 +19,28 @@ export default {
       reactWrapper({
         modulePath: (className, tagName) => `../dist/web-components.js`,
       }),
+      cleanForStorybook()
     ],
   }
+
+  function cleanForStorybook() {
+    return {
+      name: 'clean-for-storybook',
+      analyzePhase({ ts, node, moduleDoc, context }) {
+        if (!context.dev) {
+          return;
+        }
+  
+        switch (node.kind) {
+          case ts.SyntaxKind.ClassDeclaration: {
+            const className = node.name.getText();
+            const classDoc = moduleDoc?.declarations?.find(
+              declaration => declaration.name === className
+            );
+            classDoc.members = [];
+          }
+        }
+      },
+    };
+  }
+  

@@ -3,8 +3,35 @@
   "tags": [
     {
       "name": "my-switch",
-      "description": "Switches allow the user to toggle an option on or off.",
-      "attributes": []
+      "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displays when switch is on\n- **unchecked** - Displays when switch is off\n\n**Events:**\n - **switch-change** - Emitted when switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Adds a description for the switch",
+          "values": []
+        },
+        {
+          "name": "checked",
+          "description": "Used to determine if the switch is on or off",
+          "values": []
+        },
+        {
+          "name": "disabled",
+          "description": "Prevents switch form changing value",
+          "values": []
+        },
+        {
+          "name": "label-position",
+          "description": "Identifies where in relation to the switch the label should be placed",
+          "values": [
+            { "name": "" },
+            { "name": "top" },
+            { "name": "start" },
+            { "name": "end" },
+            { "name": "bottom" }
+          ]
+        }
+      ]
     }
   ]
 }
