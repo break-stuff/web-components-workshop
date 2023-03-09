@@ -20,7 +20,7 @@
     "build-storybook": "build-storybook",
     "dev": "run-p analyze:dev storybook",
     "start": "vite --open",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006",
     "test": "web-test-runner",
     "test:watch": "web-test-runner --watch"
   },
