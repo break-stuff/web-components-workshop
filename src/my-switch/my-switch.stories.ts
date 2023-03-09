@@ -1,43 +1,21 @@
 import { html } from "lit";
 import "./index";
+import { getWcStorybookHelpers } from "wc-storybook-helpers";
+
+const { argTypes, events, template } = getWcStorybookHelpers('my-switch');
 
 export default {
   title: "Components/Switch",
   component: "my-switch",
-  argTypes: {
-    label: {
-      control: { type: "text" },
-    },
-    labelPosition: {
-      control: { type: "radio" },
-      options: ["top", "start", "end", "bottom"],
-    },
-    ["--size"]: {
-      control: { type: "text" },
-    },
-  },
+  argTypes,
   parameters: {
     actions: {
-      handles: ["switch-change"],
+      handles: events,
     },
   },
 };
 
-const DefaultTemplate = (args: any) => {
-  return html`
-    <style>
-      my-switch {
-        --size: ${args["--size"]};
-      }
-    </style>
-    <my-switch
-      label=${args.label}
-      label-position=${args.labelPosition}
-      ?checked=${args.checked}
-      ?disabled=${args.disabled}
-    ></my-switch>
-  `;
-};
+const DefaultTemplate = (args: any) => template(args);
 
 export const Default: any = DefaultTemplate.bind({});
 Default.args = {
@@ -94,5 +72,5 @@ export const IconTest: any = IconTemplate.bind({});
 IconTest.args = {
   label: "Icon Test",
   labelPosition: "top",
-  ["--size"]: "1rem",
+  "--size": "1rem",
 };
