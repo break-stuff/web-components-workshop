@@ -3,8 +3,9 @@
   "tags": [
     {
       "name": "my-switch",
-      "description": "Switches allow the user to toggle an option on or off.",
-      "attributes": []
+      "description": "Switches allow the user to toggle an option on or off.\n\n\n---\n\n\n",
+      "attributes": [],
+      "references": []
     }
   ]
 }

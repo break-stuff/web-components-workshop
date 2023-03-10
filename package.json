@@ -54,5 +54,5 @@
     "vite": "^3.2.3",
     "wc-storybook-helpers": "^1.0.0-beta.1"
   },
-  "web-types": "web-types.json"
+  "web-types": "./web-types.json"
 }
