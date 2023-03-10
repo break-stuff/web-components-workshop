@@ -14,7 +14,7 @@ export class MySwitch extends LitElement {
   static styles = styles;
 
   render() {
-    return html`<h1>Hello, CodeMash!!!</h1>`
+    return html`<h1>Hello, Coders!!!</h1>`
   }
 }
 
