@@ -46,7 +46,7 @@
     "@web/test-runner-playwright": "^0.9.0",
     "babel-loader": "^8.3.0",
     "cem-plugin-jet-brains-ide-integration": "^1.0.0-beta.1",
-    "cem-plugin-react-wrapper": "^2.0.0",
+    "cem-plugin-react-wrapper": "^2.1.0",
     "cem-plugin-vs-code-custom-data-generator": "^1.4.1",
     "default-browser-id": "^1.0.4",
     "lit-html": "^2.4.0",
