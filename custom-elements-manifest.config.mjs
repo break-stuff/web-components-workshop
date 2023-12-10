@@ -1,6 +1,8 @@
-import { generateCustomData } from "cem-plugin-vs-code-custom-data-generator";
-import { reactWrapper } from "cem-plugin-react-wrapper";
-import { generateWebTypes } from "cem-plugin-jet-brains-ide-integration";
+import { customElementVsCodePlugin } from "custom-element-vs-code-integration";
+import { customElementJetBrainsPlugin } from "custom-element-jet-brains-integration";
+import { customElementJsxPlugin } from "custom-element-jsx-integration";
+import { customElementVuejsPlugin } from "custom-element-vuejs-integration";
+import { customElementReactWrapperPlugin } from "custom-element-react-wrappers";
 
 export default {
     /** Globs to analyze */
@@ -14,10 +16,18 @@ export default {
     /** Enable special handling for litelement */
     litelement: true,
     plugins: [
-      generateCustomData(),
-      generateWebTypes(),
-      reactWrapper({
-        modulePath: (className, tagName) => `../dist/web-components.js`,
+      customElementVsCodePlugin(),
+      customElementJetBrainsPlugin(),
+      customElementJsxPlugin({
+        outdir: 'types',
+        fileName: 'jsx.d.ts'
+      }),
+      customElementVuejsPlugin({
+        outdir: 'types',
+        fileName: 'vuejs.d.ts'
+      }),
+      customElementReactWrapperPlugin({
+        modulePath: (className, tagName) => `../index.js`,
       }),
     ],
   }
