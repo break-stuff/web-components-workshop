@@ -12,7 +12,7 @@ npm i && npm run build
 
 ## Running the Project
 
-There are two ways to run the project so you can test your components. 
+There are two ways to run the project so you can test your components.
 
 ### Local Dev Server
 
@@ -65,11 +65,11 @@ Angular has great web component integration. Including the `CUSTOM_ELEMENTS_SCHE
 Here is an example of adding it to `AppModule`:
 
 ```ts
-import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 
 @NgModule({
   declarations: [AppComponent],
@@ -89,15 +89,15 @@ Vue also has great web component integration. It is as simple as telling Vue to 
 Add this to wherever your Vue instance is configured:
 
 ```ts
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from "vue";
+import App from "./App.vue";
 
 // Tell Vue to ignore all custom elements that are prefixed with "my-"
 Vue.config.ignoredElements = [/my-\w*/];
 
 new Vue({
-  render: h => h(App)
-}).$mount('#app');
+  render: (h) => h(App),
+}).$mount("#app");
 ```
 
 ### React

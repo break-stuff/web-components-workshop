@@ -1,5 +1,5 @@
-import { setCustomElementsManifest } from '@storybook/web-components';
-import customElements from '../dist/custom-elements.json';
+import { setCustomElementsManifest } from "@storybook/web-components";
+import customElements from "../dist/custom-elements.json";
 
 setCustomElementsManifest(customElements);
 
@@ -19,4 +19,4 @@ export const parameters = {
     // Add your configuration here
     return config;
   },
-}
+};
