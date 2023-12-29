@@ -1,18 +1,10 @@
 {
-  "name": "web-components",
+  "name": "web-components-workshop",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/web-components.js",
-  "exports": {
-    ".": "./dist/my-element.es.js"
-  },
-  "types": "types/my-element.d.ts",
-  "files": [
-    "dist",
-    "types",
-    "react"
-  ],
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "analyze": "cem analyze",
     "analyze:dev": "cem analyze --watch",
