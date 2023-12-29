@@ -1,0 +1,28 @@
+import { LitElement, html } from 'lit';
+import { styles } from './{{kebabCase name}}.styles.js';
+
+/**
+ * TODO: Add description
+ *
+ * @tag {{kebabCase name}}
+ *
+ * @slot - Default slot description
+ * 
+ * @csspart {{kebabCase name}}-part - Part exposed for external styles
+ * 
+ * @cssprop [--custom-color=#670000] - Property exposed for custom styles
+ * 
+ */
+export class {{pascalCase name}} extends LitElement {
+  static styles = styles;
+
+  render() {
+    return html`<h1>Hello, Coders!!!</h1>`;
+  }
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    '{{kebabCase name}}': {{pascalCase name}};
+  }
+}

@@ -1,1 +1,1 @@
-export * from './my-switch';
+export * from './components/index.js';
