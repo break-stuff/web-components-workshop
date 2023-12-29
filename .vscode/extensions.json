@@ -2,6 +2,7 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "runem.lit-plugin"
+    "runem.lit-plugin",
+    "pushqrdx.inline-html"
   ]
 }
