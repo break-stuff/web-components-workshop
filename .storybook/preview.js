@@ -1,22 +1,25 @@
 import { setCustomElementsManifest } from '@storybook/web-components';
-import customElements from '../dist/custom-elements.json';
+import customElements from '../custom-elements.json';
+import { setWcStorybookHelpersConfig } from 'wc-storybook-helpers';
+import { withActions } from '@storybook/addon-actions/decorator';
 
+setWcStorybookHelpersConfig({ typeRef: 'parsedType' });
 setCustomElementsManifest(customElements);
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    expanded: true,
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
+/** @type { import('@storybook/web-components').Preview } */
+const preview = {
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      sort: 'alpha',
+      expanded: true,
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
+      },
     },
   },
-  options: {
-    enableShortcuts: false,
-  },
-  async viteFinal(config, options) {
-    // Add your configuration here
-    return config;
-  },
-}
+  decorators: [withActions],
+};
+
+export default preview;

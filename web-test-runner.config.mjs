@@ -1,19 +1,19 @@
-import { playwrightLauncher } from '@web/test-runner-playwright';
-import { esbuildPlugin } from '@web/dev-server-esbuild';
+import { playwrightLauncher } from "@web/test-runner-playwright";
+import { esbuildPlugin } from "@web/dev-server-esbuild";
 
 // https://modern-web.dev/docs/test-runner/overview/
-export default ({
-  files: 'src/**/*.test.ts',
+export default {
+  files: "src/**/*.test.ts",
   browsers: [
     // https://modern-web.dev/docs/test-runner/browser-launchers/overview/#playwright
-    playwrightLauncher({ product: 'chromium' }),
-    playwrightLauncher({ product: 'webkit' }),
-    playwrightLauncher({ product: 'firefox' })
+    playwrightLauncher({ product: "chromium" }),
+    playwrightLauncher({ product: "webkit" }),
+    playwrightLauncher({ product: "firefox" }),
   ],
   nodeResolve: true,
-  rootDir: '.',
+  rootDir: ".",
   plugins: [
     // https://modern-web.dev/docs/dev-server/plugins/esbuild/
-    esbuildPlugin({ ts: true })
-  ]
-});
+    esbuildPlugin({ ts: true }),
+  ],
+};

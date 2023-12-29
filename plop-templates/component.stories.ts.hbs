@@ -1,0 +1,28 @@
+import { html } from 'lit';
+import { Meta, StoryObj } from '@storybook/web-components';
+import { getWcStorybookHelpers } from 'wc-storybook-helpers';
+import './index.js';
+import type { {{pascalCase name}} } from './{{kebabCase name}}.js';
+
+const { argTypes, events, args } = getWcStorybookHelpers('{{kebabCase name}}');
+
+const meta: Meta<{{pascalCase name}}> = {
+  title: 'Components/{{pascalCase name}}',
+  component: '{{kebabCase name}}',
+  args,
+  argTypes,
+  parameters: {
+    actions: {
+      handles: [events],
+    },
+  },
+};
+
+export default meta;
+
+type Story = StoryObj<{{pascalCase name}} & typeof args>;
+
+export const Default: Story = {
+  render: () => html`<{{kebabCase name}}></{{kebabCase name}}>`,
+  args: {}
+};
