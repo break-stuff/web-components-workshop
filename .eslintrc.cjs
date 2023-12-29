@@ -6,8 +6,10 @@ module.exports = {
   extends: [
     'eslint:recommended', 
     'plugin:@typescript-eslint/recommended', 
-    'prettier', 
     'plugin:storybook/recommended', 
+    'plugin:wc/recommended',
+    'plugin:lit/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -27,9 +29,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
-    quotes: ['error', 'single'],
     semi: ['error', 'always'],
   },
 };
