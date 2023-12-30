@@ -45,7 +45,7 @@ export const Default: Story = {
 };
 
 export const ActionTest: Story = {
-  render: html`
+  render: () => html`
     <button class="toggle-button">Toggle</button>
     <br />
     <br />
