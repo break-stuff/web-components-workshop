@@ -40,6 +40,7 @@
     "@web/test-runner": "^0.18.0",
     "@web/test-runner-commands": "^0.9.0",
     "@web/test-runner-playwright": "^0.11.0",
+    "cem-plugin-expanded-types": "^1.1.4",
     "custom-element-jet-brains-integration": "^1.4.0",
     "custom-element-jsx-integration": "^1.1.0",
     "custom-element-react-wrappers": "^1.1.0",
@@ -61,5 +62,6 @@
     "wc-storybook-helpers": "^1.1.1",
     "web-test-runner-performance": "^0.1.5"
   },
-  "web-types": "./web-types.json"
+  "web-types": "./web-types.json",
+  "customElements": "custom-elements.json"
 }
