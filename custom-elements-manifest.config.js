@@ -3,6 +3,7 @@ import { customElementJetBrainsPlugin } from "custom-element-jet-brains-integrat
 import { customElementJsxPlugin } from "custom-element-jsx-integration";
 import { customElementVuejsPlugin } from "custom-element-vuejs-integration";
 import { customElementReactWrapperPlugin } from "custom-element-react-wrappers";
+import { getTsProgram, expandTypesPlugin } from "cem-plugin-expanded-types";
 
 export default {
   /** Globs to analyze */
@@ -15,9 +16,16 @@ export default {
   packagejson: true,
   /** Enable special handling for litelement */
   litelement: true,
+  overrideModuleCreation: ({ts, globs}) => {
+    const program = getTsProgram(ts, globs, "tsconfig.json");
+    return program
+      .getSourceFiles()
+      .filter((sf) => globs.find((glob) => sf.fileName.includes(glob)));
+  },
   plugins: [
     customElementVsCodePlugin(),
     customElementJetBrainsPlugin(),
+    expandTypesPlugin(),
     customElementJsxPlugin({
       outdir: "types",
       fileName: "jsx.d.ts",
