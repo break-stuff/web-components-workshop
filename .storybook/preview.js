@@ -3,7 +3,7 @@ import customElements from '../custom-elements.json';
 import { setWcStorybookHelpersConfig } from 'wc-storybook-helpers';
 import { withActions } from '@storybook/addon-actions/decorator';
 
-setWcStorybookHelpersConfig({ typeRef: 'parsedType' });
+setWcStorybookHelpersConfig({ typeRef: 'expandedType' });
 setCustomElementsManifest(customElements);
 
 /** @type { import('@storybook/web-components').Preview } */
