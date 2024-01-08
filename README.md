@@ -1,22 +1,38 @@
 # Web Component Workshop
 
-This repo is used as a template for conducting a web component workshop.
+This repo is used as a template for conducting a web component workshop. The components are written using the [Lit library](https://lit.dev/).
 
 ## Getting Started
 
-Before getting started you will need to install the dependencies and create an initial build. Run the following command in our terminal:
+Before getting started you will need to install the dependencies and create an initial build. Run the following command in your terminal:
 
 ```bash
 npm i && npm run build
 ```
 
-## Running the Project
+## Creating Components
+
+A component generator has been set up in this project using [Plop templates](https://plopjs.com/). Creating a new component can be done using the following command and following the instructions:
+
+```bash
+npm run plop
+```
+
+## Running Storybook
 
 ```bash
 npm run dev
 ```
 
-Running this command will start the Storybook instance. 
+Running this command will start the [Storybook](https://storybook.js.org/) instance. The Storybook experienced has been enhanced using the [Web Component Storybook Helpers](https://www.npmjs.com/package/wc-storybook-helpers) to provides better integration for web components.
+
+## Running Tests
+
+Tests are done using [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/) and [Playwright](https://modern-web.dev/docs/test-runner/browser-launchers/playwright/), so tests are run in _actual_ browsers (Chrome, Firefox, and Safari/WebKit). Tests can be run using the following command:
+
+```bash
+npm run test
+```
 
 ## Framework Integrations
 
@@ -48,11 +64,11 @@ The `CUSTOM_ELEMENTS_SCHEMA` does not provide any additional data about your com
 
 If you haven't configured your Vue.js project to work with custom elements/web components, follow [the instructions here](https://vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue) based on your project type to ensure the components work correctly.
 
-To provide type safety and autocomplete, you can generate custom types using the [custom elements Vuejs integration](https://www.npmjs.com/package/custom-element-vuejs-integration).
+To provide type safety and autocomplete, you can generate custom types using the [Custom Elements Vuejs Integration](https://www.npmjs.com/package/custom-element-vuejs-integration) package.
 
 ### React
 
-React does not have great web component support, but fortunately there are a number of tools out there to the wrap components to provide better compatibility. There are some framework-specific tools to generate wrappers, but this project uses a framework agnostic tool that generates them from the Custom Elements Manifest called the (Custom Element react Wrappers)[https://www.npmjs.com/package/custom-element-react-wrappers].
+React does not have great web component support, but fortunately there are a number of tools out there to the wrap components to provide better compatibility. There are some framework-specific tools to generate wrappers, but this project uses a framework agnostic tool that generates them from the Custom Elements Manifest called the [Custom Element React Wrappers](https://www.npmjs.com/package/custom-element-react-wrappers).
 
 ### Additional Integrations
 
@@ -64,15 +80,12 @@ The following tools generate types that provide inline documentation, autocomple
 
 ## IDE Integration
 
-- [VS Code Data Generator](https://www.npmjs.com/package/custom-element-vs-code-integration) - creates intellisense/autocomplete for our components in VS Code
-- [JetBrains Web Type Generator](https://www.npmjs.com/package/custom-element-jet-brains-integration) - creates intellisense/autocomplete for our components in JetBrains IDEs (WebStorm, Rider, IntelliJ, PHPStorm...)
+- [VS Code Data Generator](https://www.npmjs.com/package/custom-element-vs-code-integration) - creates intellisense/autocomplete for our components in [VS Code](https://code.visualstudio.com/)
+- [JetBrains Web Type Generator](https://www.npmjs.com/package/custom-element-jet-brains-integration) - creates intellisense/autocomplete for our components in [JetBrains IDEs](https://www.jetbrains.com/) (WebStorm, Rider, IntelliJ, PHPStorm...)
 
 
-## Relevant Links
+## Additional Links
 
-- [Lit](https://lit.dev/) - library used to author the web components
-- [Storybook](https://storybook.js.org/) - used to run our dev environment
-- [Web Component Storybook Helpers](https://www.npmjs.com/package/wc-storybook-helpers) - provides better integration for web components in Storybook.
 - [Custom Elements Manifest (CEM) Analyzer](https://custom-elements-manifest.open-wc.org/) - serializes the component metadata
 - [Custom Element Lazy-Loader](https://www.npmjs.com/package/custom-element-lazy-loader) - Automatically loads components from a single entry point.
-- [Custom Element Expanded Types](https://www.npmjs.com/package/cem-plugin-expanded-types) - Parses typeScript types to provide better tooling integration.
+- [Custom Element Expanded Types](https://www.npmjs.com/package/cem-plugin-expanded-types) - Parses TypeScript types to provide better tooling integration.
