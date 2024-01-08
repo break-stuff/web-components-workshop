@@ -43,6 +43,7 @@
     "cem-plugin-expanded-types": "^1.1.4",
     "custom-element-jet-brains-integration": "^1.4.0",
     "custom-element-jsx-integration": "^1.1.0",
+    "custom-element-lazy-loader": "^1.0.0",
     "custom-element-react-wrappers": "^1.1.0",
     "custom-element-vs-code-integration": "^1.2.1",
     "custom-element-vuejs-integration": "^1.0.0",
