@@ -20,16 +20,35 @@ export class MySwitch extends LitElement {
   /** Controls the checked state of the the switch */
   @property({ type: Boolean, reflect: true }) checked: boolean = false;
 
+  /** Label for the switch */
   @property() label: string = "";
+
+  /** Disables the switch */
+  @property({ type: Boolean, reflect: true }) disabled: boolean = false;
 
   toggle() {
     this.checked = !this.checked;
   }
 
+  handleClick(event: MouseEvent) {
+    if (this.disabled) {
+      event.stopPropagation();
+      return;
+    }
+
+    this.toggle();
+  }
+
   render() {
     return html`
       <span id="label">${this.label}</span>
-      <button role="switch" aria-checked=${this.checked} aria-describedby="label" @click=${this.toggle}>
+      <button 
+        role="switch" 
+        aria-checked=${this.checked} 
+        aria-labelledby="label" 
+        aria-disabled=${this.disabled}
+        @click=${this.handleClick}
+      >
         <div class="track">
           <div class="thumb"></div>
         </div>

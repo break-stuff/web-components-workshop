@@ -5,7 +5,7 @@ import { getWcStorybookHelpers } from 'wc-storybook-helpers';
 import './index.js';
 import type { MySwitch } from './my-switch.js';
 
-const { argTypes, events, args } = getWcStorybookHelpers('my-switch');
+const { argTypes, events, args, template } = getWcStorybookHelpers('my-switch');
 
 const meta: Meta<MySwitch> = {
   title: 'Components/MySwitch',
@@ -24,6 +24,6 @@ export default meta;
 type Story = StoryObj<MySwitch>;
 
 export const Default: Story = {
-  render: (args) => html`<my-switch label=${args.label}></my-switch>`,
+  render: (args) => template(args),
   args: {}
 };

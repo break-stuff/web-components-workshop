@@ -9,6 +9,11 @@ export const styles = css`
     margin-inline-start: auto;
   }
 
+  :host([disabled]) .track {
+    background-color: #ccc;
+    border-color: #ccc;
+  }
+
   button {
     background-color: transparent;
     border: none;
