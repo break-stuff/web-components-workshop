@@ -2,7 +2,8 @@ import { css } from 'lit';
 
 export const styles = css`
   :host {
-    --custom-color: #670000;
+    --switch-color: teal;
+    --switch-border-radius: 1rem;
   }
 
   :host([checked]) .thumb {
@@ -10,8 +11,7 @@ export const styles = css`
   }
 
   :host([disabled]) .track {
-    background-color: #ccc;
-    border-color: #ccc;
+    --switch-color: #ccc;
   }
 
   button {
@@ -23,17 +23,17 @@ export const styles = css`
 
   .track {
     display: inline-flex;
-    background-color: teal;
+    background-color: var(--switch-color);
     height: 1rem;
     width: 2rem;
-    border: 2px solid teal;
-    border-radius: 1rem;
+    border: 2px solid var(--switch-color);
+    border-radius: var(--switch-border-radius);
   }
 
   .thumb {
     background-color: white;
     height: 1rem;
     width: 1rem;
-    border-radius: 1rem;
+    border-radius: var(--switch-border-radius);
   }
 `;

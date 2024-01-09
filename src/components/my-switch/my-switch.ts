@@ -9,9 +9,11 @@ import { styles } from "./my-switch.styles.js";
  *
  * @slot - Default slot description
  *
- * @csspart my-switch-part - Part exposed for external styles
+ * @csspart switch-thumb - controls the styles of the the thumb element
+ * @csspart switch-track - controls the styles of the the track element
  *
- * @cssprop [--custom-color=#670000] - Property exposed for custom styles
+ * @cssprop [--switch-color=teal] - background color for track
+ * @cssprop [--switch-border-radius=1rem] - border radius for thumb and track
  *
  */
 export class MySwitch extends LitElement {
@@ -49,8 +51,8 @@ export class MySwitch extends LitElement {
         aria-disabled=${this.disabled}
         @click=${this.handleClick}
       >
-        <div class="track">
-          <div class="thumb"></div>
+        <div class="track" part="switch-track">
+          <div class="thumb" part="switch-thumb"></div>
         </div>
       </button>
     `;

@@ -1,5 +1,4 @@
 import { html } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
 import { Meta, StoryObj } from '@storybook/web-components';
 import { getWcStorybookHelpers } from 'wc-storybook-helpers';
 import './index.js';
@@ -24,6 +23,13 @@ export default meta;
 type Story = StoryObj<MySwitch>;
 
 export const Default: Story = {
-  render: (args) => template(args),
+  render: (args) => html`
+  ${template(args)}
+  <style>
+    my-switch::part(switch-thumb) {
+      background-color: red;
+    }
+  </style>
+  `,
   args: {}
 };
