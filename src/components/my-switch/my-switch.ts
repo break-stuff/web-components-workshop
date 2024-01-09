@@ -10,7 +10,7 @@ import { styles } from "./my-switch.styles";
  * @cssprop [--switch-size=1rem] - Controls the size of the switch
  * @cssprop [--switch-color=teal] - Controls the color of the switch
  * 
- * @event switch-change - Emitted when switch is toggled
+ * @event change - Emitted when switch is toggled
  * 
  * @slot checked - Displays when switch is on
  * @slot unchecked - Displays when switch is off
