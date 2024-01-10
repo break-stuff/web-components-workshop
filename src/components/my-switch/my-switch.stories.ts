@@ -33,3 +33,15 @@ export const Default: Story = {
   `,
   args: {}
 };
+
+export const Slots: Story = {
+  render: () => html`
+    <my-switch label="Another Label">
+      <span slot="label">My <em>Label</em></label>
+      <span slot="label">My <em>Label</em></label>
+      <span slot="label">My <em>Label</em></label>
+      <span slot="label">My <em>Label</em></label>
+    </my-switch>
+  `,
+  args: {}
+};

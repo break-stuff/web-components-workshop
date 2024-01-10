@@ -14,6 +14,10 @@ export const styles = css`
     --switch-color: #ccc;
   }
 
+  [name="label"]::slotted(span) {
+    color: blue;
+  }
+
   button {
     background-color: transparent;
     border: none;
